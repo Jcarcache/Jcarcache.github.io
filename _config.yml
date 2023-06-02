@@ -55,14 +55,14 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Jonathan Carcache"
+  name   : "Jonathan M. Carcache"
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "test"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://"
-    - label: "Twitter"
+    - label: "Twitter1"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/"
     - label: "GitHub"
