@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Jonathan Carcache
 email: 
-description: >- test
+description: >- "a place to write about myself"
 twitter_username: Squidephant
 github_username: "Jcarcache"
 minimal_mistakes_skin: "sunrise"
@@ -57,7 +57,7 @@ plugins:
 author:
   name   : "Jonathan Carcache"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "test"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
