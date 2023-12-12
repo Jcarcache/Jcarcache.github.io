@@ -3,7 +3,7 @@
 ### Education 
 
 ### Work Experience 
--nps
--toolik
+can opening 
+spoon musician 
 
 ### outreach
