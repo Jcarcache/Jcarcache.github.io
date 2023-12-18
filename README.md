@@ -15,5 +15,5 @@
 * Fairchild Tropical Botanic Garden Internship, Intern, Miami, FL	(2016)
 
 
-![A.ochotnesis](assests/images/Androsace_ochotensis.HEIC)
+![A.ochotnesis](assests/img/Androsace_ochotensis.HEIC)
 
