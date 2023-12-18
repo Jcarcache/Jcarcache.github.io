@@ -19,4 +19,7 @@
 ![A.ochotnesis](assests/img/Androsace_ochotensis_github.png "_Androsace_ _ochotensis_ found growing atop a mountain (North Slope, Alaska)" )
 "_Androsace_ _ochotensis_ found growing in the Brooks Range (North Slope, Alaska)" 
 
+![BICY](assests/img/IMG_9549.jpg "_Foggy morning in Big Cypress National Preserve" )
+
+
 
