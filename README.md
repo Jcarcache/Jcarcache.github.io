@@ -15,7 +15,7 @@
 * Fairchild Tropical Botanic Garden Internship, Intern, Miami, FL	(2016)
 
 
-![A.ochotnesis](assests/img/Androsace_ochotensis_github.png)
-- _Androsace_ _ochotensis_ found growing atop a mountain (North Slope, Alaska) 
+![A.ochotnesis](assests/img/Androsace_ochotensis_github.png "_Androsace_ _ochotensis_ found growing atop a mountain (North Slope, Alaska)" )
+"_Androsace_ _ochotensis_ found growing atop a mountain (North Slope, Alaska)" 
 
 
