@@ -5,7 +5,7 @@
 
 ### Work/Research Experience 
 * Arctic Observation Network & International Tundra Experiment, Field technician, Northslope, AK (2023)
-* South Florida & Caribbean Inventory & Monitoring Network, Biological Science Technician< Miami, FL (2023)
+* South Florida & Caribbean Inventory & Monitoring Network, Biological Science Technician, Miami, FL (2023)
 * Senior thesis, FIU, Miami, FL (2022)
 * Harvard Forest Summer Research Program, Intern, Petersham, MA (2021)
 * Fairchild Tropical Botanic Garden Internship, Intern, Miami, FL (2020-2021)
