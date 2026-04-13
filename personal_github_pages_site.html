@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonathan Carcache</title>
+  <meta name="description" content="Personal website for Jonathan Carcache" />
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --surface: #fffdf8;
+      --text: #1f1f1f;
+      --muted: #5a5a5a;
+      --line: #ddd4c7;
+      --accent: #7d5a3b;
+      --accent-soft: #eee3d4;
+      --max: 1024px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(247, 244, 239, 0.88);
+      border-bottom: 1px solid var(--line);
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 5rem 0 3rem;
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.15;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.85rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      transition: 0.2s ease;
+      font-weight: 600;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .button.secondary {
+      color: var(--accent);
+      background: transparent;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .hero-card,
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 1.5rem;
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      display: block;
+      border: 1px solid var(--line);
+      margin-bottom: 1rem;
+    }
+
+    .hero-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    section {
+      padding: 1.25rem 0 3rem;
+    }
+
+    .section-title {
+      margin-bottom: 1rem;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+    }
+
+    .section-text {
+      color: var(--muted);
+      max-width: 75ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      padding: 1.4rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      font-size: 0.85rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #faf7f2;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .timeline-item {
+      padding: 1.2rem 1.3rem;
+      border-left: 4px solid var(--accent);
+      background: var(--surface);
+      border-radius: 0 14px 14px 0;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 820px) {
+      .hero,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Jonathan Carcache</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Plant ecology • Pollination ecology • Symbiosis</span>
+        <h1>Researching how species interactions shape ecological communities.</h1>
+        <p>
+          I am Jonathan Carcache, a PhD student studying pollination ecology, plant interactions,
+          and the ecological complexity of symbiosis. My work connects field ecology, greenhouse
+          experiments, and community level processes to better understand how interactions shift across context.
+        </p>
+        <div class="buttons">
+          <a class="button primary" href="#contact">Get in touch</a>
+          <a class="button secondary" href="#projects">View projects</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80" alt="Landscape placeholder" />
+        <h3>Current focus</h3>
+        <p>
+          I am interested in pollen movement, parasitic plant ecology, and how multipartite interactions
+          reshape how we interpret costs and benefits in ecological systems.
+        </p>
+      </aside>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About</h2>
+      <p class="section-text">
+        I am a first year PhD student at Florida Atlantic University. My research focuses on pollination ecology,
+        parasitic plant ecology, and the idea that symbiosis is best understood as a continuum shaped by both abiotic
+        and biotic context. I am especially interested in how indirect interactions can alter the ecological outcomes
+        of relationships that are often treated as fixed.
+      </p>
+    </section>
+
+    <section id="research">
+      <h2 class="section-title">Research interests</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Pollination networks</h3>
+          <p>Using pollen transfer and stigma based approaches to quantify realized pollen movement rather than relying only on pollinator visitation as a proxy.</p>
+          <div class="tag-row">
+            <span class="tag">Pollen movement</span>
+            <span class="tag">Arctic systems</span>
+            <span class="tag">Community ecology</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Parasitic plant ecology</h3>
+          <p>Exploring how parasitic plants influence host interactions with pollinators, herbivores, pathogens, and surrounding community members.</p>
+          <div class="tag-row">
+            <span class="tag">Cassytha</span>
+            <span class="tag">Pedicularis</span>
+            <span class="tag">Symbiosis theory</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Context dependent symbiosis</h3>
+          <p>Testing the idea that ecological outcomes emerge from networks of interactions, not only pairwise exchanges between a host and symbiont.</p>
+          <div class="tag-row">
+            <span class="tag">Mutualism</span>
+            <span class="tag">Parasitism</span>
+            <span class="tag">Interaction webs</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Field and greenhouse integration</h3>
+          <p>Bridging field observations, manipulative experiments, and trait based measurements to understand how ecological context changes biological outcomes.</p>
+          <div class="tag-row">
+            <span class="tag">Field ecology</span>
+            <span class="tag">Experiments</span>
+            <span class="tag">Plant traits</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Selected projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Arctic pollen transfer networks</h3>
+          <p>Developing stigma based pollen transfer networks in Arctic plant communities to evaluate realized pollen movement and the community level influence of Pedicularis.</p>
+        </article>
+        <article class="card">
+          <h3>Parasitic plants and downstream interactions</h3>
+          <p>Investigating how parasitic plants alter host relationships with pollinators, herbivores, and pathogens, potentially shifting interactions along a symbiotic continuum.</p>
+        </article>
+        <article class="card">
+          <h3>Greenhouse host stress experiments</h3>
+          <p>Testing how drought and parasitism interact to shape floral traits, foliar microbiomes, and host susceptibility to antagonists.</p>
+        </article>
+        <article class="card">
+          <h3>Toolik pollen database</h3>
+          <p>Building a reference pollen library to support future research and create a long term resource for Arctic field ecology.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>PhD Student • Florida Atlantic University</h3>
+          <p>Research in pollination ecology, symbiosis theory, plant interactions, and Arctic field ecology.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Biological Science Field Technician • National Park Service</h3>
+          <p>Field monitoring, plant tissue collection, ecological data collection, and long term biodiversity work in South Florida and the Caribbean.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>B.S. in Biological Sciences • Florida International University</h3>
+          <p>Training in plant science, field biology, and research methods that now inform my current work in ecology.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="card">
+        <p>
+          Email: <a href="mailto:Jcarcache2025@fau.edu">Jcarcache2025@fau.edu</a><br />
+          GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">github.com/yourusername</a><br />
+          CV: <a href="#">Add your CV link here</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Jonathan Carcache. Built with HTML and hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
